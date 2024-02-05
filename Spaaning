@@ -5,7 +5,7 @@ function generateVerb(input) {
     if (input === 1) {return 'marry'}
     if (input === 2) {return 'kill'}
     if (input === 3) {return 'fuck'}
-    else {return 'just cry'}
+    else {return 'just cry with'}
 }
 function generateFirstVerb(number) {
     if (number === 1) {return 'I'}
@@ -13,13 +13,16 @@ function generateFirstVerb(number) {
     if (number === 3) {return 'We'}
     else {return 'They'}
 }
-
-
-
-
-console.log(generateVerb(generateRandomNumber()))
-console.log(generateFirstVerb(generateRandomNumber()))
-function generateSentence(verb, firstVerb) {
-    return ` ${firstVerb} have hereby decided that i will ${verb} you`
+function generateThirdVerb(numb) {
+    if (numb === 1) {return 'decided'}
+    if (numb === 2) {return 'concluded'}
+    if (numb === 3) {return 'made sure'}
+    else {return 'infered'}
 }
-console.log(generateSentence(generateVerb(generateRandomNumber()), generateFirstVerb(generateRandomNumber())))
+
+
+
+function generateSentence(verb, firstVerb, thirdVerb) {
+    return ` ${firstVerb} have hereby ${thirdVerb} that i will ${verb} you`
+}
+console.log(generateSentence(generateVerb(generateRandomNumber()), generateFirstVerb(generateRandomNumber()), generateThirdVerb(generateRandomNumber())))
