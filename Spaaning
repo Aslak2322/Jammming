@@ -7,8 +7,19 @@ function generateVerb(input) {
     if (input === 3) {return 'fuck'}
     else {return 'just cry'}
 }
-console.log(generateVerb(generateRandomNumber()))
-function generateSentence(verb) {
-    return `I have hereby decided that i will ${verb} you`
+function generateFirstVerb(number) {
+    if (number === 1) {return 'I'}
+    if (number === 2) {return 'You'}
+    if (number === 3) {return 'We'}
+    else {return 'They'}
 }
-console.log(generateSentence(generateVerb(generateRandomNumber())))
+
+
+
+
+console.log(generateVerb(generateRandomNumber()))
+console.log(generateFirstVerb(generateRandomNumber()))
+function generateSentence(verb, firstVerb) {
+    return ` ${firstVerb} have hereby decided that i will ${verb} you`
+}
+console.log(generateSentence(generateVerb(generateRandomNumber()), generateFirstVerb(generateRandomNumber())))
