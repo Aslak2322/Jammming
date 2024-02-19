@@ -6,3 +6,9 @@ nav {
     flex-direction: row;
     justify-content: space-around;
 }
+h2{
+    text-align: center;
+}
+p {
+    text-align: center;
+}
