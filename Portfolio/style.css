@@ -8,7 +8,31 @@ nav {
 }
 h2{
     text-align: center;
+    color: gray;
 }
 p {
     text-align: center;
+}
+#aboutMe {
+    
+}
+
+#introduction {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+#jobs {
+    grid-row: 1;
+    grid-column: 2;
+}
+#learning {
+    grid-row: 1;
+    grid-column: 3;
+}
+
+#career {
+    display: grid;
+    width: 100%;
+    background-color: blanchedalmond;
 }
