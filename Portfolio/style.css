@@ -1,14 +1,17 @@
 h1 {
     text-align: center;
+    color: rgb(55, 23, 85);
 }
 nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    background-color: blanchedalmond;
+    margin-top: 0;
 }
 h2{
     text-align: center;
-    color: gray;
+    color: rgb(91, 20, 20);
 }
 p {
     text-align: center;
@@ -35,4 +38,14 @@ p {
     display: grid;
     width: 100%;
     background-color: blanchedalmond;
+}
+body {
+    background-color: aliceblue;
+}
+ul {font-size: 30px;}
+a {
+    color: black;
+}
+a:hover {
+    color: white
 }
