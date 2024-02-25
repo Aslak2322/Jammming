@@ -3,17 +3,39 @@
     <head>
         <title>Portfolio Project</title>
         <link rel="stylesheet" href="style.css">
+        <style>
+            @media only screen and (max-width: 600px) {
+          
+          header nav {
+              display: block;
+              text-align: center;
+          }
+          
+          header nav a {
+              display: block;
+              margin-bottom: 10px; /* Add some space between links */
+          }
+          #aboutMe {
+              width: 90%;
+              margin: 0 auto;
+          }
+          img {
+              max-width: 100%;
+              height: auto;
+          }
+      }
+        </style>
     </head>
     <body>
         <header>
-            <nav> <a href="#">About Me</a> <a href="./contact.html">Contact</a>
+            <nav> <a href="#">About Me</a> <a href="./contact.html">Contact</a></nav>
         </header>
         <h1>About Me</h1>
         <div id='aboutMe'>
           <div id="career">
             <div id="introduction">
-              <h2>My Education</h2>
-              <p>
+              <h2 onclick="toggleVisibility('education')">My Education</h2>
+              <p id="education">
                 Hello my name is Aslak Jakob Bennedsen and i am 23 years old.
                 I grew up in copenhagen, and i have lived there for most of my life,
                 except for 2.5 years, where i lived in france, when i was 8.
@@ -23,8 +45,8 @@
               </p>
             </div>
             <div id='jobs'>
-              <h2>Jobs</h2>
-              <p>
+              <h2 onclick="toggleVisibility('work')">Jobs</h2>
+              <p id='work'>
                 During my second year in high school i had a job at a firm called flyhjaelp.
                 There we helped customers whose flight was delayed, get compensation from airline.
                 Following high school i worked as a phone salesman for four months. Just after 
@@ -36,8 +58,8 @@
               </p>
             </div>
             <div id="learning">
-              <h2>My Self Education</h2>
-              <p>
+              <h2 onclick="toggleVisibility('Self')">My Self Education</h2>
+              <p id='Self'>
                 During my time at home on crutches, i started learning, and i started learning a lot.
                 Prior to the injury i had started reading non-fiction books, and started playing chess.
                 Now was the perfect time to pick up the pace. I have read a lot of psychology, economics,
@@ -48,15 +70,15 @@
               </p>
               </div>
             <div id="travelling">
-              <h2>Travelling</h2>
-              <p>
+              <h2 onclick="toggleVisibility('vacation')">Travelling</h2>
+              <p id="vacation">
                 In betweens my jobs i have been travelling a lot. I have visited Mexico, Peru, Indonesia, and Gran Canaria
                 to name a few places. 
               </p>
             </div>
             <div id="sports">
-              <h2>Sports</h2>
-              <p>
+              <h2 onclick="toggleVisibility('active')">Sports</h2>
+              <p id="active">
                 I have always liked sports when i was little i played soccer, danced capoeira, played table tennis and did athletics.
                 Now i skateboard, wakeboard, wakeskate and run. I am the fifth best wakeboarder and fith best wakeskater in Denmark.
               </p>
@@ -70,5 +92,16 @@
             <li>Portfolio Project</li>
           </ul>
         </div>
+        <script>
+          function toggleVisibility(id){
+            let paragraph = document.getElementById(id);
+            if (paragraph.style.display === 'none') {
+              paragraph.style.display = 'block';
+            }
+            else {
+              paragraph.style.display = 'none'
+            }
+          }
+        </script>
     </body>
 </html>
