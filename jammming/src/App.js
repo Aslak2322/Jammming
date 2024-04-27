@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import Searchbar from './Searchbar';
+import SearchResults from './Searchresults';
 
 function App() {
   return (
     <div className="App">
-      <Searchbar />
+      <SearchResults />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

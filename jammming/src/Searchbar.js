@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
 
-function Searchbar() {
-    const [searchTerm, setSearchTerm] = useState('');
+function Searchbar({ onSearchChange }) {
+    const [searchTerminology, setSearchTerminology] = useState('');
 
     const handleInputChange = (e) => {
-        setSearchTerm(e.target.value)
+        setSearchTerminology(e.target.value)
     };
+
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            onSearchChange(searchTerminology)
+        }
+    }
 
 
     return (
@@ -14,8 +20,9 @@ function Searchbar() {
             <input
               type='text'
               id='searchInput'
-              value={searchTerm}
+              value={searchTerminology}
               onChange={handleInputChange}
+              onKeyDown={handleKeyDown}
             />
         </div>
     )

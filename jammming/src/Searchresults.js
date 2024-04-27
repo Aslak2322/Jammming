@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
-import Searchbar from './Searchbar';
+import SearchBar from './Searchbar';
 
 function SearchResults() {
-    const searchResult = {Searchbar.value}
+    const [searchTerm, setSearchTerm] = useState('');
+
+    const handleSearchChange = (value) => {
+        setSearchTerm(value);
+    };
 
     return (
         <div>
-            <searchResult />
+            <SearchBar onSearchChange={handleSearchChange} />
+            {searchTerm && <p>Search Result: {searchTerm}</p>}
         </div>
     )
 
